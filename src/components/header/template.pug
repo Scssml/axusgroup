@@ -1,0 +1,28 @@
+-
+  const logo = require('@img/logo.svg');
+  const slogan = 'Дашборды, которые сэкономят вам время и деньги';
+  const btnName = 'Заказать звонок'
+
+header.header
+  .container
+    .row.align-items-center
+      .col
+        .row.align-items-center
+          .col-auto
+            a.logo(href="/")
+              img(src=logo, alt="logo")
+
+          .col-auto
+            .header__slogan= slogan
+
+      .col
+        .row.align-items-center.justify-content-end
+          .col-auto
+            +btn({
+              name: btnName,
+              size: 'small',
+              color: 'white-transparent',
+            })
+
+          .col-auto
+            button.btn-menu

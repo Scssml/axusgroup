@@ -1,0 +1,80 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  transform: translateX(0);
+  transition: transform 0s linear .5s;
+
+  &--active {
+    transform: translateX(-100%);
+    transition: transform 0s linear;
+  }
+  
+  &__content {
+    position: relative;
+    z-index: 5;
+    width: 468px;
+    background-color: #E42313;
+    padding: 76px 70px 25px;
+    text-align: right;
+    transform: translateX(100%);
+    transition: transform .25s ease-in-out;
+
+    &--active {
+      transform: translateX(0);
+      transition: transform .25s ease-in-out .25s;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .7;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity .25s ease-in-out .25s;
+
+    &--active {
+      opacity: .7;
+      transition: opacity .25s ease-in-out;
+    }
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 25px;
+    right: 70px;
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    outline: none;
+
+    &:before,
+    &:after {
+      content: '';
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+      position: absolute;
+      top: calc(50% - 1.5px);
+      left: 0;
+    }
+
+    &:before {
+      transform: rotate(-45deg);
+    }
+    &:after {
+      transform: rotate(45deg);
+    }
+  }
+}
