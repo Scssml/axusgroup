@@ -1,5 +1,5 @@
 -
-  const defaultOptions = {
+  const defaultOptionsBtn = {
     name: '',
     size: 'medium',
     color: 'red',
@@ -7,7 +7,7 @@
   };
 
 mixin btn(options)
-  - options = Object.assign({}, defaultOptions, options);
+  - options = Object.assign({}, defaultOptionsBtn, options);
   - const classCss = `btn--size-${options.size} btn--color-${options.color}`;
 
   if options.href.length > 0

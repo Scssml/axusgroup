@@ -4,3 +4,18 @@
     max-width: 1430px;
   }
 }
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.overflow-auto {
+
+  @media (max-width: 991px){
+    overflow: auto;
+  }
+}

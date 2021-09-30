@@ -1,0 +1,43 @@
+.stats-one-display {
+  background: #E7EDF1;
+  padding: 90px 0 110px;
+  color: #616A6D;
+
+  &__img {
+    margin-top: -45px;
+
+    img {
+      object-fit: scale-down;
+      object-position: top;
+      width: 100%;
+
+      @media (max-width: 1199px) {
+        max-width: 100%;
+        width: auto;
+      }
+    }
+
+    @media (max-width: 1199px) {
+      margin-top: 0;
+      text-align: center;
+    }
+  }
+
+  &__advantages {
+    margin-top: -55px;
+
+    h4,
+    .h4 {
+      margin-bottom: 40px;
+      color: #2C4964;
+    }
+
+    @media (max-width: 1509px) {
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: 575px) {
+    padding: 30px 0 40px;
+  }
+}

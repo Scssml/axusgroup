@@ -1,0 +1,26 @@
+.footer {
+  background: #182832;
+  padding: 20px 0 15px;
+  color: #fff;
+  text-align: center;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid #27323B;
+    padding-top: 15px;
+    margin-top: 20px;
+  }
+
+  &__info {
+    font-size: .8rem;
+    opacity: .5;
+  }
+}

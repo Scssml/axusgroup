@@ -1,0 +1,14 @@
+-
+  const defaultOptionsTextIcon = {
+    img: '',
+    text: '',
+  };
+
+mixin textIcon(options)
+  - options = Object.assign({}, defaultOptionsTextIcon, options);
+
+  .text-icon&attributes(attributes)
+    .text-icon__img 
+      img(src=options.img, alt="icon")
+
+    span.size-3!= options.text 

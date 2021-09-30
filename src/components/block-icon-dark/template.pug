@@ -1,0 +1,20 @@
+-
+  const defaultOptionsBlockIconDark = {
+    name: '',
+    img: '',
+    text: '',
+  };
+
+mixin blockIconDark(options)
+  - options = Object.assign({}, defaultOptionsBlockIconDark, options);
+
+  .block-icon-dark
+    if options.img
+      .block-icon-dark__img 
+        img(src=options.img, alt=options.name)
+
+    if options.name
+      .block-icon-dark__name.h5= options.name 
+
+    if options.text
+      .block-icon-dark__text.size-2= options.text 

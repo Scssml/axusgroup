@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -6,6 +7,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const ESLintWebpackPlugin = require('eslint-webpack-plugin');
+// const jquery = require('jquery');
 
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -89,6 +91,11 @@ module.exports = {
       runtime: true,
     }),
     new ESLintWebpackPlugin(),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    }),
   ],
   module: {
     rules: [
@@ -180,7 +187,7 @@ module.exports = {
   },
   devtool: 'source-map',
   devServer: {
-    open: true,
+    // open: true,
     hot: true,
     watchFiles: ['src/**/*.html', 'src/**/*.pug'],
     port: 8080,

@@ -1,2 +1,44 @@
-.footer
-  p 321
+-
+  const itemsFooter = [
+    {
+      img: require('@img/facebook.svg'),
+      href: "#",
+    },
+    {
+      img: require('@img/instagram.svg'),
+      href: "#",
+    },
+    {
+      img: require('@img/youtube.svg'),
+      href: "#",
+    },
+  ];
+
+footer.footer.size-2
+  .container 
+    .row.align-items-center.justify-content-center.justify-content-md-between
+      .col-auto.mb-3.mb-md-0 
+        .row.align-items-center
+          .col-auto 
+            a.footer__logo(href="/")
+              img(src=require('@img/logo.svg'), alt="logo")
+          
+          .col-auto
+            .footer__copyright © Все права защищены
+      
+      .col-auto
+        each val in itemsFooter
+          +linkIcon(val)
+
+  .footer__bottom
+    .container
+      .row.align-items-center.justify-content-center.justify-content-lg-between
+        .col-lg-auto.mb-2.mb-lg-0
+          a(href="#") Политика конфиденциальности
+
+        .col.mb-2.mb-lg-0
+          .footer__info Вся представленная на сайте информация носит информационный характер и не является публичной офертой
+
+        .col-lg-auto 
+          a(href="#" target="_blank") Создание сайтов
+          | — SEO Простор

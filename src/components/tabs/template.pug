@@ -1,0 +1,18 @@
+-
+  const defaultOptionsTabs = {
+    tabsId: '',
+    items: [],
+  };
+
+mixin tabs(options)
+  - options = Object.assign({}, defaultOptionsTabs, options);
+
+  .tabs 
+    each val, index in options.items
+      - const activeClass = (!index) ? 'tabs__item--active' : '';
+
+      button.tabs__item(
+        data-tabs-id=options.tabsId
+        data-tab=val.href
+        class=activeClass
+      )= val.name

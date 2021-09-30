@@ -1,0 +1,20 @@
+-
+  const defaultOptionsBlockIcon = {
+    name: '',
+    img: '',
+    text: '',
+  };
+
+mixin blockIcon(options)
+  - options = Object.assign({}, defaultOptionsBlockIcon, options);
+
+  .block-icon
+    if options.img
+      .block-icon__img 
+        img(src=options.img, alt=options.name)
+
+    if options.name
+      .block-icon__name.h5= options.name 
+
+    if options.text
+      .block-icon__text.size-2= options.text 

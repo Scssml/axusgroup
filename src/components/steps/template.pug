@@ -1,0 +1,39 @@
+-
+  const itemsSteps = [
+    {
+      name: 'Ознакомительная встреча',
+      text: 'рассказ о задачах отчетности',
+      img: require('@img/ico-7.svg'),
+    },
+    {
+      name: 'Демонстрация',
+      text: 'возможности платформы на примере похожих кейсов',
+      img: require('@img/ico-8.svg'),
+    },
+    {
+      name: 'Уточнение задачи',
+      text: 'формулирование задачи, которую решим с помощью дашборда',
+      img: require('@img/ico-9.svg'),
+    },
+    {
+      name: 'План действий',
+      text: 'для разработки ТЗ на ваш проект',
+      img: require('@img/ico-10.svg'),
+    },
+  ];
+
+section.steps#steps
+  .container 
+    h2.mb-5 Удобство и простота  заказа дашборда AXUS
+
+    .overflow-auto
+      .row.mb-5.flex-nowrap.flex-lg-wrap
+        each val, index in itemsSteps
+          - const lastClass = (index + 1 === itemsSteps.length) ? 'steps__line--last' : '';
+          .col-auto.col-lg-3
+            .steps__line(class=lastClass)
+
+      .row.flex-nowrap.flex-lg-wrap
+        each val in itemsSteps
+          .col-auto.col-lg-6.col-xl-3.mb-4.mb-xl-0
+            +blockIconDark(val)

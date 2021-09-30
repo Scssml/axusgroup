@@ -1,0 +1,28 @@
+-
+  const defaultOptionsFormBlock2 = {
+    title: '',
+    img: '',
+    text: '',
+  };
+
+mixin formBlock2(options)
+  - options = Object.assign({}, defaultOptionsFormBlock2, options);
+
+  section.form-block-2 
+    .container
+      .row 
+        .col-lg-7
+          h2!= options.title 
+
+          block
+
+        .col-lg-5
+          .form-block-2__tooltip
+            +tooltip({
+              img: require('@img/ico-6.svg'),
+              text: options.text,
+            })
+
+    if options.img
+      .form-block-2__img
+        img(src=options.img, alt=options.title)

@@ -1,0 +1,13 @@
+.prices {
+  background: #E7EDF1;
+  padding: 90px 0 110px;
+
+  h2,
+  .h2 {
+    text-align: center;
+  }
+
+  @media (max-width: 575px) {
+    padding: 30px 0 40px;
+  }
+}

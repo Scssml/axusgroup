@@ -1,0 +1,35 @@
+-
+  const defaultOptionsBlockPrice = {
+    img: '',
+    name: '',
+    text: '',
+    label: '',
+    labelColor: 'yellow',
+  };
+
+mixin blockPrice(options)
+  - options = Object.assign({}, defaultOptionsBlockPrice, options);
+
+  .block-price
+    .block-price__img 
+      img(src=options.img, alt=options.name)
+
+    .block-price__name.h5= options.name 
+
+    .row 
+      .col-sm-6.col-md-12.col-lg-6.mb-3.mb-sm-0.mb-md-3.mb-lg-0
+        +btn({
+          name: 'Подробнее',
+          size: 'medium',
+          color: 'red',
+        })(class="w-100")
+
+      .col-sm-6.col-md-12.col-lg-6 
+        +btn({
+          name: 'Узнать цену',
+          size: 'medium',
+          color: 'red-transparent',
+        })(class="w-100")
+
+    if options.label
+    .block-price__label(class=`block-price__label--color-${options.labelColor}`)= options.label

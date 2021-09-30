@@ -1,0 +1,61 @@
+.block-price {
+  background: #FFFFFF;
+  box-shadow: 0px 10px 40px rgba(188, 188, 188, .15);
+  border-radius: 10px;
+  padding: 40px 30px 30px;
+  position: relative;
+
+  &__img {
+    height: 220px;
+    margin-bottom: 20px;
+
+    img {
+      object-fit: scale-down;
+      object-position: bottom;
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (max-width: 575px) {
+      height: 150px;
+    }
+  }
+
+  &__name {
+    color: #2C4964;
+    margin-bottom: 25px;
+    min-height: 54px;
+  }
+
+  &__label {
+    box-shadow: 0px 10px 40px rgba(188, 188, 188, .15);
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-family: 'Fira Sans Condensed';
+    font-size: .95rem;
+    line-height: 1.5;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+
+    &--color {
+
+      &-yellow {
+        background: #EEAB00;
+      }
+
+      &-gray {
+        background: #5EACCA;
+      }
+
+      &-blue {
+        background: #0065ED;
+      }
+    }
+  }
+
+  @media (max-width: 575px) {
+    padding: 30px 20px 20px;
+  }
+}

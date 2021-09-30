@@ -1,0 +1,14 @@
+-
+  const defaultOptionsAccordion = {
+    items: [],
+  };
+
+mixin accordion(options)
+  - options = Object.assign({}, defaultOptionsAccordion, options);
+
+  .accordion 
+    each val in options.items 
+      .accordion__item 
+        .accordion__name.h5= val.name 
+
+        .accordion__text.size-2= val.text

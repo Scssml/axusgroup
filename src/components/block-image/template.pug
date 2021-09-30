@@ -1,0 +1,18 @@
+-
+  const defaultOptionsBlockImage = {
+    img: '',
+    name: '',
+    text: '',
+  };
+
+mixin blockImage(options)
+  - options = Object.assign({}, defaultOptionsBlockImage, options);
+
+  .block-image
+    .block-image__img 
+      img(src=options.img, alt=options.name)
+
+    .block-image__text
+      .block-image__name.h5= options.name 
+
+      .size-2= options.text

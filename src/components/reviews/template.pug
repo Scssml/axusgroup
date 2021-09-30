@@ -1,0 +1,60 @@
+-
+  const itemsReviews = [
+    {
+      img: require('@img/company-1.jpg'),
+      name: 'ООО «Компания»',
+      subtitle: 'С каким запросом пришли',
+      text: 'Abusus non tollit usum. Accepto damno. Accessio cedit principali. Actio bonae fidei. Actio in factum concepta. Actio in ius concepta.  Actio in personam. Actio in rem. Actio noxalis. Actio poenalis. Alibi. A potiori. Argumenta ponderantur, non numerantur. Argumentum ad oculos.',
+      rating: '5.0',
+    },
+    {
+      img: require('@img/company-2.jpg'),
+      name: 'ООО «Компания»',
+      subtitle: 'С каким запросом пришли',
+      text: 'Abusus non tollit usum. Accepto damno. Accessio cedit principali. Actio bonae fidei. Actio in factum concepta. Actio in ius concepta.  Actio in personam. Actio in rem. Actio noxalis. Actio poenalis. Alibi. A potiori. Argumenta ponderantur, non numerantur. Argumentum ad oculos.',
+      rating: '4.9',
+    },
+    {
+      img: require('@img/company-1.jpg'),
+      name: 'ООО «Компания»',
+      subtitle: 'С каким запросом пришли',
+      text: 'Abusus non tollit usum. Accepto damno. Accessio cedit principali. Actio bonae fidei. Actio in factum concepta. Actio in ius concepta.  Actio in personam. Actio in rem. Actio noxalis. Actio poenalis. Alibi. A potiori. Argumenta ponderantur, non numerantur. Argumentum ad oculos.',
+      rating: '5.0',
+    },
+  ];
+
+section.reviews#reviews
+  .container 
+    .row.align-items-center.mb-5
+      .col-xl-10
+        h2 Отзывы о внедрении дашбордов
+
+      .col-xl-2.d-none.d-xl-block
+        +sliderNav({
+          sliderId: 'slider-2',
+        })(class="ml-auto")
+
+    +slider2({
+      sliderId: 'slider-2',
+    })
+      each val in itemsReviews
+        +blockReview({
+          img: val.img,
+          name: val.name,
+          text: val.text,
+          subtitle: val.subtitle,
+          rating: val.rating,
+        })
+
+    .row.justify-content-between.justify-content-xl-center.mt-5.align-items-center
+      .col-auto
+        +btn({
+          name: 'Оставить отзыв',
+          size: 'medium',
+          color: 'red',
+        })
+
+      .col-auto.d-block.d-xl-none
+        +sliderNav({
+          sliderId: 'slider-2',
+        })(class="ml-auto")

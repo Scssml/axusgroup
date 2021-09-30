@@ -4,25 +4,26 @@
   const btnName = 'Заказать звонок'
 
 header.header
-  .container
-    .row.align-items-center
-      .col
-        .row.align-items-center
-          .col-auto
-            a.logo(href="/")
-              img(src=logo, alt="logo")
+  .header__content
+    .container
+      .row.align-items-center
+        .col-auto.col-md
+          .row.align-items-center
+            .col-auto
+              a.logo(href="/")
+                img(src=logo, alt="logo")
 
-          .col-auto
-            .header__slogan= slogan
+            .col.col-xl-auto.d-none.d-md-block
+              .header__slogan= slogan
 
-      .col
-        .row.align-items-center.justify-content-end
-          .col-auto
-            +btn({
-              name: btnName,
-              size: 'small',
-              color: 'white-transparent',
-            })
+        .col
+          .row.align-items-center.justify-content-end
+            .col-auto.d-none.d-sm-block
+              +btn({
+                name: btnName,
+                size: 'small',
+                color: 'white-transparent',
+              })
 
-          .col-auto
-            button.btn-menu
+            .col-auto
+              button.btn-menu

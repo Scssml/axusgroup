@@ -1,0 +1,81 @@
+-
+  const itemsPricesTabs = [
+    {
+      name: 'Проектное предложение',
+      href: 'price-tab-1',
+    },
+    {
+      name: 'Комплексное внедрение',
+      href: 'price-tab-2',
+    },
+    {
+      name: 'Нестандартные отчеты',
+      href: 'price-tab-3',
+    },
+    {
+      name: 'Поддержка',
+      href: 'price-tab-4',
+    },
+  ];
+
+  const itemsPricesSlider = [
+    {
+      img: require('@img/img-4.jpg'),
+      name: 'Проект анализа данных Service Desk',
+      text: '',
+      label: 'Собственнику',
+      labelColor: 'yellow',
+    },
+    {
+      img: require('@img/img-5.jpg'),
+      name: 'Проект аналитики продаж',
+      text: '',
+      label: 'РОПу',
+      labelColor: 'gray',
+    },
+    {
+      img: require('@img/img-6.jpg'),
+      name: 'Проект сквозной аналитики продаж',
+      text: '',
+      label: 'Маркетинг',
+      labelColor: 'blue',
+    },
+    {
+      img: require('@img/img-5.jpg'),
+      name: 'Проект аналитики продаж',
+      text: '',
+      label: 'РОПу',
+      labelColor: 'gray',
+    },
+  ];
+
+section.prices#prices 
+  .container 
+    h2.mb-5 Сколько стоит внедрение
+
+    +tabs({
+      tabsId: 'price-tabs',
+      items: itemsPricesTabs,
+    })
+
+    #price-tabs.mt-5
+      div(data-tab="price-tab-1").d-block
+        +slider1({
+          sliderId: 'price-slider',
+        })
+          each val in itemsPricesSlider
+            +blockPrice(val)
+
+        +sliderNav({
+          sliderId: 'price-slider',
+        })(class="ml-auto mt-5")
+
+
+      div(data-tab="price-tab-2").d-none
+        | 2
+
+      div(data-tab="price-tab-3").d-none
+        | 3
+
+      div(data-tab="price-tab-4").d-none
+        | 4

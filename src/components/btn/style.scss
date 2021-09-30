@@ -65,4 +65,14 @@
     border-color: #B8100B;
     color: #fff;
   }
+
+  @media (max-width: 575px) {
+    min-width: 144px;
+    height: 45px;
+    font-size: 1.06rem;
+  }
+
+  &.w-100 {
+    min-width: auto;
+  }
 }

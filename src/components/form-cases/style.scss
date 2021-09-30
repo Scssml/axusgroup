@@ -1,0 +1,19 @@
+.form-cases {
+  background: #E7EDF1;
+  padding: 90px 0 110px;
+  text-align: center;
+  color: #616A6D;
+
+  h2,
+  .h2 {
+    margin-bottom: 28px;
+  }
+
+  &__form {
+    margin-top: 120px;
+  }
+
+  @media (max-width: 575px) {
+    padding: 30px 0 40px;
+  }
+}

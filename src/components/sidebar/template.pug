@@ -1,7 +1,61 @@
+-
+  const itemsSidebar = [
+    {
+      name: 'Кому необходимо',
+      href: '#how-to-use',
+    },
+    {
+      name: 'Преимущества',
+      href: '#stats-one-display',
+    },
+    //- {
+    //-   name: 'Какие отчеты вы получите',
+    //-   href: '#',
+    //- },
+    {
+      name: 'Наши кейсы',
+      href: '#company-growth',
+    },
+    {
+      name: 'Отзывы',
+      href: '#reviews',
+    },
+    {
+      name: 'Стоимость',
+      href: '#prices',
+    },
+    {
+      name: 'Как заказать',
+      href: '#steps',
+    },
+    {
+      name: 'Вопрос-ответ',
+      href: '#faq',
+    },
+    {
+      name: 'Наши специалисты',
+      href: '#staff',
+    },
+    {
+      name: 'Контакты',
+      href: '#contacts',
+    },
+  ];
+
 .sidebar
   .sidebar__overlay
 
   aside.sidebar__content
     button.sidebar__btn-close
 
-    include /menu-sidebar/template
+    +menuSidebar({
+      items: itemsSidebar,
+    })
+
+    a(href="tel:78005501517").sidebar__phone.mt-4.mt-lg-5.d-none.d-sm-inline-block +7 800 550-15-17
+
+    +btn({
+      name: btnName,
+      size: 'small',
+      color: 'white-transparent',
+    })(class="mt-4 d-inline-flex d-sm-none")

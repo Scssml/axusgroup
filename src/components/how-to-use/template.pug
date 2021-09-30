@@ -1,0 +1,45 @@
+-
+  const itemsHowToUse = [
+    {
+      img: require('@img/ico-1.svg'),
+      text: 'На приготовление отчета сотрудник просит от 15 минут до нескольких дней',
+    },
+    {
+      img: require('@img/ico-2.svg'),
+      text: 'Половина любой планерки состоит из попыток синхронизировать данные нескольких отделов',
+    },
+    {
+      img: require('@img/ico-3.svg'),
+      text: 'Не получается внедрить управление компанией, основанное на KPI и достижении целей',
+    },
+    {
+      img: require('@img/ico-4.svg'),
+      text: 'Нельзя увидеть актуальные показатели бизнеса с точностью до текущего часа',
+    },
+  ]
+
+section.how-to-use#how-to-use
+  .container
+    .row.mb-4
+      .col-xl-7
+        h2 Кому необходимо
+
+      .col-xl-5
+        p
+          | Если хоть один пункт из перечисленных похож на вашу
+          | ситуацию, дашборды снимут с вас проблемы, которые
+          | мешают вам эффективно управлять бизнесом
+    
+    .row 
+      .col-xl-5.order-xl-last.mb-5.mb-xl-0
+        .how-to-use__img 
+          img(src=require('@img/how-to-use.png'), alt="how-to-use")
+
+      .col-xl-7
+        .row.overflow-auto.flex-nowrap.flex-lg-wrap
+          each val in itemsHowToUse
+            .col-auto.col-lg-6.mb-4
+              +blockIcon({
+                img: val.img,
+                text: val.text,
+              })

@@ -1,0 +1,41 @@
+-
+  const itemsDashboards = [
+    {
+      img: require('@img/ico-5.svg'),
+      text: 'Имеете полное представление о бизнесе в цифрах',
+    },
+    {
+      img: require('@img/ico-5.svg'),
+      text: 'Экономите время на подготовку отчета и коммуникации',
+    },
+    {
+      img: require('@img/ico-5.svg'),
+      text: 'Быстро внедряете изменения и видите результат',
+    },
+    {
+      img: require('@img/ico-5.svg'),
+      text: 'Видите отклонения и понимаете причину',
+    },
+    {
+      img: require('@img/ico-5.svg'),
+      text: 'Качественно управляете на расстоянии',
+    },
+    {
+      img: require('@img/ico-5.svg'),
+      text: 'Получаете единый формат отчетов и KPI',
+    },
+  ];
+
+section.dashboards
+  .container 
+    .row 
+      .col-xl-5 
+        h2.mb-5 Используя дашборды AXUS, вы
+
+        +listIcon({
+          items: itemsDashboards,
+        })
+
+      .col-xl-7 
+        .dashboards__img
+          img(src=require('@img/dashboards.png'), alt="dashboards")

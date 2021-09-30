@@ -1,0 +1,15 @@
+-
+  const defaultOptionsListIcon = {
+    items: [],
+  };
+
+mixin listIcon(options)
+  - options = Object.assign({}, defaultOptionsListIcon, options);
+
+  ul.list-icon 
+    each val in options.items 
+      li.list-icon__item 
+        span.list-icon__img 
+          img(src=val.img, alt="icon")
+
+        span= val.text 

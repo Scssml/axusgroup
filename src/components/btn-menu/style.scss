@@ -16,6 +16,12 @@
     height: 2px;
     background-color: #fff;
     transition: background-color .25s ease-in-out;
+
+    @media (max-width: 575px) {
+      transition: transform .25s ease-in-out,
+                  width 0s linear .25s,
+                  margin .25s ease-in-out .25s;
+    }
   }
 
   &:before {
@@ -32,6 +38,40 @@
     &:before,
     &:after {
       background-color: #E42313;
+
+      @media (max-width: 575px) {
+        background-color: #fff;
+      }
+    }
+  }
+
+  &--active {
+
+    &:before,
+    &:after {
+
+      @media (max-width: 575px) {
+        transition: margin .25s ease-in-out,
+                    width 0s linear .25s,
+                    transform .25s ease-in-out .25s;
+      }
+    }
+    
+    &:before {
+
+      @media (max-width: 575px) {
+        margin-bottom: -1px;
+        transform: rotate(45deg);
+      }
+    }
+
+    &:after {
+
+      @media (max-width: 575px) {
+        margin-top: -1px;
+        width: 100%;
+        transform: rotate(-45deg);
+      }
     }
   }
 }

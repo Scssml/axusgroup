@@ -1,0 +1,26 @@
+-
+  const itemsAdvantages = [
+    {
+      text: 'Видно эффективность каждого сотрудника и каждого вложенного рубля',
+      img: require('@img/adv-1.svg'),
+    },
+    {
+      text: 'Больше не нужно ждать «ручные» отчеты. Любой отчет доступен в 1 клик',
+      img: require('@img/adv-2.svg'),
+    },
+    {
+      text: 'Все работает 24/7 на любых устройствах со 100%-й точностью данных',
+      img: require('@img/adv-3.svg'),
+    },
+  ];
+
+section.advantages
+  .container
+    .row.flex-nowrap.overflow-auto
+      each val in itemsAdvantages
+        .col-auto.col-xl-4
+          .advantage
+            .advantage__img
+              img(src=val.img, alt="advantage")
+
+            .advantage__text= val.text

@@ -1,0 +1,23 @@
+-
+  const defaultOptionsBlockReview = {
+    img: '',
+    name: '',
+    subtitle: '',
+    text: '',
+    rating: 0,
+  };
+
+mixin blockReview(options)
+  - options = Object.assign({}, defaultOptionsBlockReview, options);
+
+  .block-review
+    .block-review__img 
+      img(src=options.img, alt=options.name)
+
+    .block-review__name.h5= options.name
+
+    .block-review__subtitle= options.subtitle
+
+    .block-review__text.size-2= options.text
+
+    .block-review__rating= options.rating

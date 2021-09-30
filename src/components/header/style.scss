@@ -1,11 +1,38 @@
 .header {
-  background: #182832;
-  padding: 15px 0;
-  border: 1px solid #27323B;
-  color: #84898E;
+  height: 88px;
+
+  &__content {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #182832;
+    padding: 15px 0;
+    border: 1px solid #27323B;
+    color: #84898E;
+    z-index: 5;
+
+    @media (max-width: 575px) {
+      padding: 10px 0;
+    }
+  }
+
+  .logo {
+
+    img {
+
+      @media (max-width: 575px) {
+        max-height: 36px;
+      }
+    }
+  }
 
   &__slogan {
     font-size: .85rem;
     line-height: 1.18;
+  }
+
+  @media (max-width: 575px) {
+    height: 58px;
   }
 }

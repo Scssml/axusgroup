@@ -1,38 +1,95 @@
-html {
+html,
+body {
   font-family: 'Fira Sans';
   font-weight: 300;
   font-size: 20px;
+  line-height: 1.2;
+  color: #182832;
+
+  @media (max-width: 575px) {
+    font-size: 15px;
+  }
 }
 
-h1 {
+h1,
+.h1 {
   font-weight: 600;
   font-size: 3.5rem;
+  line-height: 1.2;
+
+  @media (max-width: 575px) {
+    font-size: 1.66rem;
+    line-height: 1.3;
+  }
 }
 
-h2 {
+h2,
+.h2 {
   font-weight: 600;
   font-size: 2.9rem;
+  line-height: 1.2;
+  color: #2C4964;
+
+  @media (max-width: 575px) {
+    font-size: 1.53rem;
+    line-height: 1.3;
+  }
 }
 
-h3 {
+h3,
+.h3 {
   font-weight: 600;
   font-size: 2.7rem;
+  line-height: 1.2;
+
+  @media (max-width: 575px) {
+    font-size: 1.4rem;
+  }
 }
 
-h4 {
+h4,
+.h4 {
   font-weight: 300;
   font-size: 1.5rem;
   line-height: 1.5;
+
+  @media (max-width: 575px) {
+    font-size: 1.13rem;
+  }
 }
 
-h5 {
+h5,
+.h5 {
   font-weight: 500;
   font-size: 1.15rem;
+  line-height: 1.2;
+
+  @media (max-width: 575px) {
+    font-size: 1.2rem;
+  }
 }
 
-h6 {
+h6,
+.h6 {
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.3;
   letter-spacing: 0.1em;
+
+  @media (max-width: 575px) {
+    font-size: .86rem;
+  }
+}
+
+.size-2 {
+  font-family: 'Fira Sans Condensed';
+  font-weight: 300;
+  font-size: .95rem;
+  line-height: 1.5;
+}
+
+.size-3 {
+  font-weight: 300;
+  font-size: 1.15rem;
+  line-height: 1.5;
 }

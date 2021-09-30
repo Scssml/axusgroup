@@ -1,0 +1,54 @@
+-
+  const itemsCompanyGrowth = [
+    {
+      img: require('@img/img-1.jpg'),
+      name: 'Кейс 1',
+      text: 'Кратко, что было достингнуто Основной текст во всплывашке',
+    },
+    {
+      img: require('@img/img-2.jpg'),
+      name: 'Кейс 2',
+      text: 'Кратко, что было достингнуто Основной текст во всплывашке',
+    },
+    {
+      img: require('@img/img-3.jpg'),
+      name: 'Кейс 3',
+      text: 'Кратко, что было достингнуто Основной текст во всплывашке',
+    },
+    {
+      img: require('@img/img-2.jpg'),
+      name: 'Кейс 2',
+      text: 'Кратко, что было достингнуто Основной текст во всплывашке',
+    },
+  ];
+
+section.company-growth#company-growth
+  .container 
+    .row.align-items-center.mb-5
+      .col-xl-5 
+        h2 Мы помогаем компаниям расти
+
+      .col-xl-5
+        | Disco linguam Latīnam, ut libros Latīnos legĕre possim atque ut
+        | loquar cum iis, qui Latīnam sciunt. Sunt haud pauci homĭnes, qui
+        | affirmant usum Latīne loquendi non necessarium esse.
+
+      .col-lg-2.d-none.d-xl-block
+        +sliderNav({
+          sliderId: 'slider-1',
+        })(class="ml-auto")
+
+    +slider1({
+      sliderId: 'slider-1',
+    })
+      each val in itemsCompanyGrowth
+        +blockImage({
+          img: val.img,
+          name: val.name,
+          text: val.text
+        })
+
+    .mt-5.d-block.d-xl-none
+      +sliderNav({
+        sliderId: 'slider-1',
+      })(class="ml-auto")

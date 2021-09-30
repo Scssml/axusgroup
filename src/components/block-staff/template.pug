@@ -1,0 +1,26 @@
+-
+  const defaultOptionsBlockStaff = {
+    img: '',
+    name: '',
+    text: '',
+    post: '',
+  };
+
+mixin blockStaff(options)
+  - options = Object.assign({}, defaultOptionsBlockStaff, options);
+
+  .block-staff
+    .block-staff__img 
+      img(src=options.img, alt=options.name)
+
+    .block-staff__post= options.post
+
+    .block-staff__name.h5= options.name
+
+    .block-staff__text.size-2!= options.text
+
+    +btn({
+      name: 'Консультация',
+      size: 'medium',
+      color: 'red',
+    })

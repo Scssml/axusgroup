@@ -1,0 +1,22 @@
+-
+  const defaultOptionsFormBlock1 = {
+    title: '',
+    img: '',
+  };
+
+mixin formBlock1(options)
+  - options = Object.assign({}, defaultOptionsFormBlock1, options);
+
+  .form-block-1 
+    .row 
+      .col-lg-7 
+        .form-block-1__content
+          if options.title
+            .form-block-1__title.h4= options.title
+
+          block
+
+      .col-lg-5 
+        .form-block-1__img 
+          if options.img
+            img(src=options.img, alt=options.title)

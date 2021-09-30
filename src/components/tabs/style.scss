@@ -1,0 +1,36 @@
+.tabs {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: auto;
+
+  &__item {
+    color: #85929A;
+    border: none;
+    border-bottom: 4px solid transparent;
+    background: none;
+    padding: 0 0 10px;
+    margin-right: 80px;
+    flex-shrink: 0;
+    transition: color .25s ease-in-out,
+                border-color .25s ease-in-out;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &--active {
+      color: #E42313;
+      border-color: #E42313;
+    }
+
+    @media (max-width: 1199px) {
+      margin-right: 30px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    justify-content: flex-start;
+  }
+}

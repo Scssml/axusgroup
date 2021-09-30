@@ -1,1 +1,13 @@
-div 222
+-
+  const defaultOptionsMenuSidebar = {
+    items: [],
+  };
+
+mixin menuSidebar(options)
+  - options = Object.assign({}, defaultOptionsMenuSidebar, options);
+
+  nav
+    ul.menu-sidebar 
+      each val in options.items 
+        li.menu-sidebar__item
+          a(href=val.href).menu-sidebar__link= val.name 

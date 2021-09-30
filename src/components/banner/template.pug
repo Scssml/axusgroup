@@ -1,0 +1,29 @@
+section.banner
+  .container
+    .row
+      .col-xl-6
+        .banner__subtitle.h6 Культура управления бизнесом на основе данных
+
+        .banner__title.h1
+          | Настроим ключевые показатели бизнеса 
+          span в одном экране 
+          | за 5 дней
+
+        .banner__text.size-2
+          | Весь ваш бизнес на одном экране может выглядеть 
+          a(href="#") вот так
+          | . Или 
+          a(href="#") так
+
+        +btn({
+          name: 'Подать заявку',
+          size: 'big',
+          color: 'red',
+        })(class="banner__btn")
+
+      .col-xl-6
+        .banner__img-wrapper
+          .banner__img
+            img(src=require('@img/banner.png'), alt="banner")
+
+        

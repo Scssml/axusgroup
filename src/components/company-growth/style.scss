@@ -1,0 +1,10 @@
+.company-growth {
+  background: #E7EDF1;
+  color: #616A6D;
+  padding: 90px 0 110px;
+  line-height: 1.5;
+
+  @media (max-width: 575px) {
+    padding: 30px 0 40px;
+  }
+}

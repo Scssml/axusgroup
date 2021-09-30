@@ -1,0 +1,12 @@
+.reviews {
+  background: #F2F4F6;
+  padding: 90px 0 110px;
+
+  &__btn {
+    text-align: center;
+  }
+
+  @media (max-width: 575px) {
+    padding: 30px 0 40px;
+  }
+}

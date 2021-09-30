@@ -1,0 +1,33 @@
+-
+  const itemsContacts = [
+    {
+      img: require('@img/ico-11.svg'),
+      text: '<a href="tel:78005501517">+7 800 550-15-17</a>',
+    },
+    {
+      img: require('@img/ico-12.svg'),
+      text: 'ул. Авроры, 63, Самара (этаж 7)',
+    },
+    {
+      img: require('@img/ico-13.svg'),
+      text: '<a href="mailto:sales@axus.name">sales@axus.name</a>',
+    },
+  ];
+
+section.contacts#contacts
+  #map.contacts__map
+
+  .container 
+    .row.justify-content-end
+      .col-lg-6
+        .contacts__content
+          h2.mb-5 Контакты
+
+          each val in itemsContacts
+            +textIcon(val)(class="mb-4")
+
+          +btn({
+            name: 'Заказать звонок',
+            size: 'big',
+            color: 'red',
+          })(class="mt-4")

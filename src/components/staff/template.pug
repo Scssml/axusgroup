@@ -1,0 +1,48 @@
+-
+  const itemsStaffSlider = [
+    {
+      img: require('@img/img-7.jpg'),
+      name: 'Иван Иванов',
+      text: 'Ключевые компетенции: <br> Очень крутая информация: с кем работал, что может делать для клиента Accessio cedit principali. Actio bonae fidei. Accessio cedit principali. Actio bonae fidei. Accessio cedit principali. Actio bonae fidei. ',
+      post: 'Специализация',
+    },
+    {
+      img: require('@img/img-7.jpg'),
+      name: 'Иван Иванов',
+      text: 'Ключевые компетенции: <br> Очень крутая информация: с кем работал, что может делать для клиента Accessio cedit principali. Actio bonae fidei. Accessio cedit principali. Actio bonae fidei. Accessio cedit principali. Actio bonae fidei. ',
+      post: 'Специализация',
+    },
+    {
+      img: require('@img/img-7.jpg'),
+      name: 'Иван Иванов',
+      text: 'Ключевые компетенции: <br> Очень крутая информация: с кем работал, что может делать для клиента Accessio cedit principali. Actio bonae fidei. Accessio cedit principali. Actio bonae fidei. Accessio cedit principali. Actio bonae fidei. ',
+      post: 'Специализация',
+    },
+  ];
+
+section.staff#staff
+  .container 
+    .row.align-items-center.mb-5
+      .col-xl-10 
+        h2 Кто будет работать с вами
+      
+      .col-xl-2.d-none.d-block 
+        +sliderNav({
+          sliderId: 'slider-staff',
+        })(class="ml-auto")
+    
+    +slider2({
+      sliderId: 'slider-staff',
+    })(class="mb-5")
+      each val in itemsStaffSlider
+        +blockStaff(val)
+
+    .mb-5.d-block.d-xl-none
+      +sliderNav({
+        sliderId: 'slider-staff',
+      })(class="ml-auto")
+
+    +formBlock4({
+      title: 'Остались вопросы?',
+      img: require('@img/form-block-4.jpg'),
+    })
