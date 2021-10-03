@@ -46,3 +46,28 @@ section.staff#staff
       title: 'Остались вопросы?',
       img: require('@img/form-block-4.jpg'),
     })
+      form
+        .row 
+          .col-md-8.col-lg-12.col-xxl-7.mb-5 
+            +input({
+              name: 'phone',
+              type: 'tel',
+              placeholder: 'Телефон',
+            })
+
+          .col-12.mb-5
+            +textarea({
+              name: 'question',
+              placeholder: 'Опишите Ваш вопрос или задачу',
+            })
+        
+        .row.align-items-center
+          .col-md-6.col-lg-12.col-xxl-5.mb-4.mb-md-0.mb-lg-4.mb-xxl-0 
+            +btn({
+              name: 'Получить ответ',
+              size: 'big',
+              color: 'red',
+            })(class="w-100")
+
+          .col-md-6.col-lg-12.col-xxl-6 
+            +checkPrivacyPolicy() 

@@ -1,0 +1,19 @@
+-
+  const defaultOptionsCheckbox = {
+    name: '',
+    text: '',
+    value: '',
+  };
+
+mixin checkbox(options)
+  - options = Object.assign({}, defaultOptionsCheckbox, options);
+
+  label.checkbox
+    input(
+      type="checkbox"
+      name=options.name
+      value=options.value
+    )
+
+    div
+      span= options.text

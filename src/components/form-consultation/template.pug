@@ -3,4 +3,74 @@
   img: require('@img/form-block-2.jpg'),
   text: 'Поможет вам эффективнее управлять бизнесом',
 })
-  div(style="height: 400px;")
+  .row 
+    .col-xl-11
+      form
+        .row 
+          .col-6.col-md-4.col-lg-6.col-xl-4.mb-5
+            +checkbox({
+              name: 'programs[]',
+              value: 'Есть CRM',
+              text: 'Есть CRM',
+            })
+
+          .col-6.col-md-4.col-lg-6.col-xl-4.mb-5 
+            +checkbox({
+              name: 'programs[]',
+              value: 'Есть 1С',
+              text: 'Есть 1С',
+            })
+
+          .col-6.col-md-4.col-lg-6.col-xl-4.mb-5 
+            +checkbox({
+              name: 'programs[]',
+              value: 'Всё в Exel',
+              text: 'Всё в Exel',
+            })
+
+          .col-6.col-md-4.col-lg-6.col-xl-4.mb-5 
+            +checkbox({
+              name: 'programs[]',
+              value: 'Service Desk',
+              text: 'Service Desk',
+            })
+
+          .col-6.col-md-4.col-lg-6.col-xl-4.mb-5 
+            +checkbox({
+              name: 'programs[]',
+              value: 'РК',
+              text: 'РК',
+            })
+
+          .col-6.col-md-4.col-lg-6.col-xl-4.mb-5 
+            +checkbox({
+              name: 'programs[]',
+              value: 'IP Телефония',
+              text: 'IP Телефония',
+            })
+        
+        .row 
+          .col-sm-6.col-md-6.col-lg-6.mb-5
+            +input({
+              name: 'phone',
+              type: 'tel',
+              placeholder: 'Телефон',
+            })
+
+          .col-sm-6.col-md-6.col-lg-6.mb-5
+            +input({
+              name: 'count-staff',
+              type: 'text',
+              placeholder: 'Количество сотрудников',
+            })
+
+        .row.align-items-center
+          .col-md-6.col-lg-12.col-xl-6.mb-4.mb-md-0.mb-lg-4.mb-xl-0 
+            +btn({
+              name: 'Консультация за 0 руб.',
+              size: 'big',
+              color: 'red',
+            })(class="w-100")
+
+          .col-md-6.col-lg-12.col-xl-6 
+            +checkPrivacyPolicy() 

@@ -1,0 +1,14 @@
+-
+  const defaultOptionsTextarea = {
+    type: 'text',
+    placeholder: '',
+  };
+
+mixin textarea(options)
+  - options = Object.assign({}, defaultOptionsTextarea, options);
+
+  label.textarea
+    textarea(
+      name=options.name
+      placeholder=options.placeholder  
+    )

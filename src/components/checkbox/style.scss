@@ -1,0 +1,44 @@
+.checkbox {
+  margin: 0;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+
+  input {
+    width: 0;
+    height: 0;
+    border: none;
+    outline: none;
+    visibility: hidden;
+    transform: translateX(-100%);
+
+    & + div {
+      display: flex;
+
+      &:before {
+        content: '';
+        width: 30px;
+        height: 30px;
+        border: 1px solid #ACB7C6;
+        border-radius: 2px;
+        flex-shrink: 0;
+        align-self: flex-start;
+        margin-right: 15px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      & > span {
+        align-self: center;
+        width: 100%;
+      }
+    }
+
+    &:checked + div {
+
+      &:before {
+        background-image: url('@img/check.svg');
+      }
+    }
+  }
+}

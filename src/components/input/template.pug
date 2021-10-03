@@ -1,0 +1,16 @@
+-
+  const defaultOptionsInput = {
+    name: '',
+    type: 'text',
+    placeholder: '',
+  };
+
+mixin input(options)
+  - options = Object.assign({}, defaultOptionsBtn, options);
+
+  label.input
+    input(
+      type=options.type
+      name=options.name
+      placeholder=options.placeholder  
+    )

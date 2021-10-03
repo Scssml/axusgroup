@@ -1,0 +1,56 @@
+.check-privacy-policy {
+  margin: 0;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: 'Fira Sans Condensed';
+  font-size: .6rem;
+  line-height: 1.4;
+
+  input {
+    width: 0;
+    height: 0;
+    border: none;
+    outline: none;
+    visibility: hidden;
+    transform: translateX(-100%);
+
+    & + div {
+      display: flex;
+
+      &:before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border: 1px solid #ACB7C6;
+        border-radius: 2px;
+        flex-shrink: 0;
+        align-self: flex-start;
+        margin-right: 10px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 70%;
+      }
+
+      & > span {
+        align-self: center;
+        width: 100%;
+
+        a {
+          color: inherit;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    &:checked + div {
+
+      &:before {
+        background-image: url('@img/check.svg');
+      }
+    }
+  }
+}

@@ -45,3 +45,7 @@ import '@com/contacts/script.js';
 import '@com/text-icon/script.js';
 import '@com/footer/script.js';
 import '@com/link-icon/script.js';
+import '@com/input/script.js';
+import '@com/checkbox/script.js';
+import '@com/check-privacy-policy/script.js';
+import '@com/textarea/script.js';

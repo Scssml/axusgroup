@@ -8,4 +8,44 @@ section.form-cases
       title: 'Выберите на какой мессенджер вам отправить',
       img: require('@img/form-block-1.png'),
     })(class="form-cases__form")
-      | 123
+      form
+        .row.mb-4
+          .col-md-4.col-lg-12.col-xl-4.col-xxl-auto.mb-3
+            +checkbox({
+              name: 'messenger[]',
+              value: 'Telegram',
+              text: 'Telegram',
+            })
+          
+          .col-md-4.col-lg-12.col-xl-4.col-xxl-auto.mb-3
+            +checkbox({
+              name: 'messenger[]',
+              value: 'Viber',
+              text: 'Viber',
+            })
+
+          .col-md-4.col-lg-12.col-xl-4.col-xxl-auto.mb-3
+            +checkbox({
+              name: 'messenger[]',
+              value: 'WhatsApp',
+              text: 'WhatsApp',
+            })
+
+        .row.mb-5
+          .col-xxl-9
+            +input({
+              name: 'phone',
+              type: 'tel',
+              placeholder: 'Телефон',
+            })
+
+        .row.align-items-center
+          .col-md-6.col-lg-12.col-xl-6.col-xxl-5.mb-4.mb-md-0.mb-lg-4.mb-xl-0
+            +btn({
+              name: 'Получить кейс',
+              size: 'big',
+              color: 'red',
+            })(class="w-100")
+
+          .col-md-6.col-lg-12.col-xl-6.col-xxl-5 
+            +checkPrivacyPolicy() 
