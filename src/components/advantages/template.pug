@@ -16,9 +16,11 @@
 
 section.advantages
   .container
-    .row.flex-nowrap.overflow-auto
-      each val in itemsAdvantages
-        .col-auto.col-xl-4
+    .row
+      each val, index in itemsAdvantages
+        .col-auto.col-lg-4.mb-lg-0(
+          class=(index + 1 === itemsAdvantages.length) ? 'mb-0' : 'mb-3'
+        )
           .advantage
             .advantage__img
               img(src=val.img, alt="advantage")

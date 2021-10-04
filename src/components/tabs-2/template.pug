@@ -1,0 +1,21 @@
+-
+  const defaultOptionsTabs2 = {
+    tabsId: '',
+    items: [],
+  };
+
+mixin tabs-2(options)
+  - options = Object.assign({}, defaultOptionsTabs, options);
+
+  .tabs-2
+    each val, index in options.items
+      - const activeClass = (!index) ? 'tabs-2__item--active' : '';
+
+      button.tabs-2__item(
+        data-tabs-id=options.tabsId
+        data-tab=val.href
+        class=activeClass
+      )
+        .tabs-2__img!= val.svg
+
+        span= val.name

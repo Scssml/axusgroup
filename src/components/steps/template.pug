@@ -26,14 +26,15 @@ section.steps#steps
   .container 
     h2.mb-5 Удобство и простота  заказа дашборда AXUS
 
-    .overflow-auto
-      .row.mb-5.flex-nowrap.flex-lg-wrap
-        each val, index in itemsSteps
-          - const lastClass = (index + 1 === itemsSteps.length) ? 'steps__line--last' : '';
-          .col-auto.col-lg-3
-            .steps__line(class=lastClass)
+    .row.mb-5.d-none.d-lg-flex
+      each val, index in itemsSteps
+        - const lastClass = (index + 1 === itemsSteps.length) ? 'steps__line--last' : '';
+        .col-lg-3
+          .steps__line(class=lastClass)
 
-      .row.flex-nowrap.flex-lg-wrap
-        each val in itemsSteps
-          .col-auto.col-lg-6.col-xl-3.mb-4.mb-xl-0
-            +blockIconDark(val)
+    .row
+      each val, index in itemsSteps
+        .col-md-6.col-xl-3.mb-md-4.mb-xl-0(
+          class=(index + 1 === itemsSteps.length) ? 'mb-0' : 'mb-3'
+        )
+          +blockIconDark(val)

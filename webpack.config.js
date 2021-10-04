@@ -94,7 +94,7 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
-      'window.jQuery': 'jquery'
+      'window.jQuery': 'jquery',
     }),
   ],
   module: {
@@ -177,7 +177,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+        test: /\.(woff(2)?|eot|ttf|otf|)$/,
         type: 'asset/resource',
         generator: {
           filename: 'fonts/[hash][ext]',

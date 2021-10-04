@@ -38,9 +38,11 @@ section.stats-one-display#stats-one-display
     .stats-one-display__advantages
       h4 Это даст Вам следующие преимущества:
 
-      .row.overflow-auto.flex-nowrap
-        each val in itemsStatsOneDisplay
-          .col-auto.col-lg-4
+      .row
+        each val, index in itemsStatsOneDisplay
+          .col-lg-4.mb-lg-0(
+            class=(index + 1 === itemsStatsOneDisplay.length) ? 'mb-0' : 'mb-3'
+          )
             +blockIcon({
               name: val.name,
               img: val.img,

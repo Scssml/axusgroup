@@ -36,9 +36,9 @@ section.how-to-use#how-to-use
           img(src=require('@img/how-to-use.png'), alt="how-to-use")
 
       .col-xl-7
-        .row.overflow-auto.flex-nowrap.flex-lg-wrap
+        .row
           each val in itemsHowToUse
-            .col-auto.col-lg-6.mb-4
+            .col-auto.col-md-6.mb-4
               +blockIcon({
                 img: val.img,
                 text: val.text,

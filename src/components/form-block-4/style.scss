@@ -7,7 +7,7 @@
   color: #fff;
 
   &__content {
-    padding: 52px 72px 72px;
+    padding: 52px;
 
     @media (max-width: 575px) {
       padding: 20px;
@@ -17,6 +17,10 @@
   &__title {
     margin-bottom: 40px;
     color: inherit;
+
+    span {
+      color: #E42313;
+    }
 
     @media (max-width: 575px) {
       margin-bottom: 10px;

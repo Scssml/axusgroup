@@ -41,16 +41,4 @@
   &__text {
     align-self: center;
   }
-
-  @media (max-width: 991px) {
-    max-width: 500px;
-  }
-
-  @media (max-width: 767px) {
-    max-width: 350px;
-  }
-
-  @media (max-width: 575px) {
-    max-width: calc(100vw - 30px - 50px);
-  }
 }
