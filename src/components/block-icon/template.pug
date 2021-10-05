@@ -11,7 +11,7 @@ mixin blockIcon(options)
   .block-icon
     if options.img
       .block-icon__img 
-        img(src=options.img, alt=options.name)
+        img(src=emptyImg data-src=options.img, alt=options.name).lazyload
 
     if options.name
       .block-icon__name.h5= options.name 

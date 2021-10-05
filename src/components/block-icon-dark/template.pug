@@ -11,7 +11,7 @@ mixin blockIconDark(options)
   .block-icon-dark
     if options.img
       .block-icon-dark__img 
-        img(src=options.img, alt=options.name)
+        img(src=emptyImg data-src=options.img, alt=options.name).lazyload
 
     if options.name
       .block-icon-dark__name.h5= options.name 

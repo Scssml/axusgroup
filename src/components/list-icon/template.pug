@@ -10,6 +10,6 @@ mixin listIcon(options)
     each val in options.items 
       li.list-icon__item 
         span.list-icon__img 
-          img(src=val.img, alt="icon")
+          img(src=emptyImg data-src=val.img, alt="icon").lazyload
 
         span= val.text 

@@ -6,6 +6,8 @@ import '@style/firaSansCondensed.scss';
 import '@style/typography.scss';
 import '@style/grid.scss';
 
+import '@js/lazyload.js';
+
 import '@com/header/script.js';
 import '@com/btn/script.js';
 import '@com/btn-menu/script.js';

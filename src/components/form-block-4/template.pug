@@ -20,7 +20,7 @@ mixin formBlock4(options)
       .col-lg-6 
         .form-block-4__img 
           if options.img
-            img(src=options.img, alt=options.title)
+            img(src=emptyImg data-src=options.img, alt=options.title).lazyload
 
           if options.text
             .form-block-4__tooltip

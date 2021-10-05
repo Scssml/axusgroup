@@ -26,4 +26,4 @@ mixin formBlock2(options)
 
     if options.img
       .form-block-2__img
-        img(src=options.img, alt=options.title)
+        img(src=emptyImg data-src=options.img, alt=options.title).lazyload

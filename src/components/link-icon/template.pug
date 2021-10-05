@@ -8,4 +8,4 @@ mixin linkIcon(options)
   - options = Object.assign({}, defaultOptionsLinkIcon, options);
 
   a.link-icon(href=options.href)&attributes(attributes)
-    img(src=options.img, alt="icon", target="_blank")
+    img(src=emptyImg data-src=options.img, alt="icon", target="_blank").lazyload

@@ -21,7 +21,7 @@ footer.footer.size-2
         .row.align-items-center
           .col-auto 
             a.footer__logo(href="/")
-              img(src=require('@img/logo.svg'), alt="logo")
+              img(src=emptyImg data-src=require('@img/logo.svg'), alt="logo").lazyload
           
           .col-auto
             .footer__copyright © Все права защищены

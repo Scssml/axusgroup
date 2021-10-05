@@ -23,6 +23,6 @@ section.advantages
         )
           .advantage
             .advantage__img
-              img(src=val.img, alt="advantage")
+              img(src=emptyImg data-src=val.img, alt="advantage").lazyload
 
             .advantage__text= val.text

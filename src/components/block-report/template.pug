@@ -26,4 +26,4 @@ mixin blockReport(options)
           each val in options.imgList
             .col-sm-6.mb-3 
               .block-report__img
-                img(src=val, alt="report")
+                img(src=emptyImg data-src=val, alt="report").lazyload

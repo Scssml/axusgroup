@@ -12,7 +12,7 @@ mixin blockPrice(options)
 
   .block-price
     .block-price__img 
-      img(src=options.img, alt=options.name)
+      img(src=emptyImg data-src=options.img alt=options.name).lazyload
 
     .block-price__name.h5= options.name 
 

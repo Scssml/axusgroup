@@ -10,8 +10,8 @@ mixin blockStaff(options)
   - options = Object.assign({}, defaultOptionsBlockStaff, options);
 
   .block-staff
-    .block-staff__img 
-      img(src=options.img, alt=options.name)
+    .block-staff__img
+      img(src=emptyImg data-src=options.img, alt=options.name).lazyload
 
     .block-staff__post= options.post
 

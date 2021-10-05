@@ -10,7 +10,7 @@ mixin blockImage(options)
 
   .block-image
     .block-image__img 
-      img(src=options.img, alt=options.name)
+      img(src=emptyImg data-src=options.img, alt=options.name).lazyload
 
     .block-image__text
       .block-image__name.h5= options.name 

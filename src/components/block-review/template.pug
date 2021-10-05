@@ -12,7 +12,7 @@ mixin blockReview(options)
 
   .block-review
     .block-review__img 
-      img(src=options.img, alt=options.name)
+      img(src=emptyImg data-src=options.img, alt=options.name).lazyload
 
     .block-review__name.h5= options.name
 

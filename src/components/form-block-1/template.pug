@@ -19,4 +19,4 @@ mixin formBlock1(options)
       .col-lg-5 
         .form-block-1__img 
           if options.img
-            img(src=options.img, alt=options.title)
+            img(src=emptyImg data-src=options.img, alt=options.title).lazyload

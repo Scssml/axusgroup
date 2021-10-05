@@ -9,6 +9,6 @@ mixin tooltip(options)
 
   .tooltip
     .tooltip__img 
-      img(src=options.img, alt="tooltip")
+      img(src=emptyImg data-src=options.img, alt="tooltip").lazyload
 
     .tooltip__text= options.text

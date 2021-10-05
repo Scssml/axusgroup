@@ -9,6 +9,6 @@ mixin textIcon(options)
 
   .text-icon&attributes(attributes)
     .text-icon__img 
-      img(src=options.img, alt="icon")
+      img(src=emptyImg data-src=options.img, alt="icon").lazyload
 
     span.size-3!= options.text 
