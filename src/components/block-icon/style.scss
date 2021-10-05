@@ -49,4 +49,8 @@
     margin-top: 20px;
     align-self: flex-start;
   }
+
+  @media (max-width: 575px) {
+    padding: 25px 15px 35px;
+  }
 }

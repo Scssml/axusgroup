@@ -23,13 +23,18 @@
       height: 100%;
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 1199px) {
       margin-bottom: 0;
 
       & + .block-icon-dark__name {
         width: calc(100% - 57px);
         margin-left: 15px;
       }
+    }
+
+    @media (max-width: 575px) {
+      width: 34px;
+      height: 34px;
     }
   }
 
@@ -43,5 +48,13 @@
     height: 100%;
     margin-top: 20px;
     align-self: flex-start;
+
+    @media (max-width: 575px) {
+      margin-top: 10px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    padding: 15px;
   }
 }

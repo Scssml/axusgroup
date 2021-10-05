@@ -2,6 +2,7 @@
   const defaultOptionsFormBlock4 = {
     title: '',
     img: '',
+    text: '',
   };
 
 mixin formBlock4(options)
@@ -20,3 +21,10 @@ mixin formBlock4(options)
         .form-block-4__img 
           if options.img
             img(src=options.img, alt=options.title)
+
+          if options.text
+            .form-block-4__tooltip
+              +tooltip2({
+                img: require('@img/img-9.jpg'),
+                text: options.text,
+              })

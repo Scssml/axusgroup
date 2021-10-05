@@ -19,6 +19,10 @@
   &__text {
     padding: 25px 30px;
     color: #2C4964;
+
+    @media (max-width: 575px) {
+      padding: 20px 15px;
+    }
   }
 
   &__name {

@@ -29,6 +29,7 @@
 
   &__img {
     height: 100%;
+    position: relative;
 
     img {
       object-fit: cover;
@@ -43,6 +44,28 @@
 
     @media (max-width: 575px) {
       height: 280px;
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    top: 70px;
+    left: -70px;
+    max-width: 482px;
+
+    @media (max-width: 991px) {
+      top: auto;
+      left: 52px;
+      bottom: 40px;
+    }
+
+    @media (max-width: 767px) {
+      max-width: calc(100% - 104px);
+    }
+
+    @media (max-width: 575px) {
+      left: 20px;
+      max-width: calc(100% - 40px);
     }
   }
 }

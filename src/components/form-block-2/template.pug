@@ -17,11 +17,12 @@ mixin formBlock2(options)
           block
 
         .col-lg-5
-          .form-block-2__tooltip
-            +tooltip({
-              img: require('@img/ico-6.svg'),
-              text: options.text,
-            })
+          if options.text
+            .form-block-2__tooltip
+              +tooltip({
+                img: require('@img/ico-6.svg'),
+                text: options.text,
+              })
 
     if options.img
       .form-block-2__img

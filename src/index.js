@@ -24,6 +24,7 @@ import '@com/block-icon-dark/script.js';
 import '@com/stats-one-display/script.js';
 import '@com/form-consultation/script.js';
 import '@com/tooltip/script.js';
+import '@com/tooltip-2/script.js';
 import '@com/company-growth/script.js';
 import '@com/slider-nav/script.js';
 import '@com/slider-1/script.js';

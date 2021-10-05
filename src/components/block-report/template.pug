@@ -11,7 +11,7 @@ mixin blockReport(options)
 
   .block-report
     .row 
-      .col-lg-5 
+      .col-lg-5.mb-3.mb-lg-0
         .block-report__title.h5= options.titleList
 
         ul.block-report__list
@@ -24,6 +24,6 @@ mixin blockReport(options)
 
         .row
           each val in options.imgList
-            .col-lg-6.mb-3 
+            .col-sm-6.mb-3 
               .block-report__img
                 img(src=val, alt="report")

@@ -156,12 +156,12 @@
     },
   ];
 
-section.reports
+section.reports#reports
   .container
     h2.mb-5 Какие отчеты вы получите с Axus
 
     .row.mb-5
-      .col-xl-3
+      .col-xl-3.mb-4.mb-xl-0
         +tabs-2({
           tabsId: 'report-tabs',
           items: itemsReportsTabs,
@@ -181,6 +181,7 @@ section.reports
     +formBlock4({
       title: 'Оставьте заявку<br><span>на обратный звонок</span>',
       img: require('@img/form-block-3.jpg'),
+      text: 'Наши специалисты готовы приступить к обсуждению уже сегодня',
     })
       form
         .row 

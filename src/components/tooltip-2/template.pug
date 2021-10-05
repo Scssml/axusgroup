@@ -1,0 +1,14 @@
+-
+  const defaultOptionsTooltip2 = {
+    img: '',
+    text: '',
+  };
+
+mixin tooltip2(options)
+  - options = Object.assign({}, defaultOptionsTooltip, options);
+
+  .tooltip-2
+    .tooltip-2__img 
+      img(src=options.img, alt="tooltip")
+
+    .tooltip-2__text= options.text
