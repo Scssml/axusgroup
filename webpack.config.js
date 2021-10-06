@@ -1,33 +1,96 @@
 const path = require('path');
-const webpack = require("webpack");
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const ESLintWebpackPlugin = require('eslint-webpack-plugin');
-// const jquery = require('jquery');
+// const HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin');
+const PreloadWebpackPlugin = require('@vue/preload-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 
 const optimization = () => {
   const config = {
-    // splitChunks: {
-    //   chunks: 'all',
-    //   cacheGroups: {
-    //     vendors: {
-    //       filename: 'js/vendors.[hash].js',
-    //     },
-    //   },
-    // },
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        vendors: {
+          name: 'vendors',
+          test: /[\\/]node_modules[\\/]/,
+          priority: 10,
+          reuseExistingChunk: true,
+        },
+      },
+    },
   };
 
   if (!isDev) {
     config.minimizer = [
-      new OptimizeCssAssetsWebpackPlugin(),
+      new CssMinimizerPlugin(),
       new TerserWebpackPlugin(),
     ];
+  }
+
+  return config;
+};
+
+const plugins = () => {
+  const config = [
+    new HtmlWebpackPlugin({
+      title: 'Axus group',
+      template: 'index.pug',
+      filename: 'index.html',
+      minify: {
+        // collapseWhitespace: !isDev,
+        collapseWhitespace: false,
+      },
+      inject: 'body',
+    }),
+    new CleanWebpackPlugin(),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src/favicon.ico'),
+          to: path.resolve(__dirname, 'dist'),
+        },
+      ],
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].[hash].css',
+      runtime: true,
+    }),
+    new ESLintWebpackPlugin(),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+    }),
+  ];
+
+  if (!isDev) {
+    config.push(
+      new PreloadWebpackPlugin({
+        rel: 'preload',
+        include: 'all',
+        fileBlacklist: [/\.map/, /\.svg/, /\.png/, /\.jpg/],
+      }),
+    );
+
+    // config.push(
+    //   new HtmlCriticalWebpackPlugin({
+    //     base: path.resolve(__dirname, 'dist'),
+    //     src: 'index.html',
+    //     dest: 'index-critical.html',
+    //     inline: true,
+    //     minify: true,
+    //     extract: false,
+    //     width: 1920,
+    //     height: 912,
+    //   }),
+    // );
   }
 
   return config;
@@ -58,46 +121,7 @@ module.exports = {
     },
   },
   optimization: optimization(),
-  plugins: [
-    // new HtmlWebpackPlugin({
-    //   title: 'Webpack test',
-    //   template: 'template.html',
-    //   filename: 'index.html',
-    //   minify: {
-    //     collapseWhitespace: !isDev,
-    //   },
-    //   inject: 'body',
-    // }),
-    new HtmlWebpackPlugin({
-      title: 'Axus group',
-      template: 'index.pug',
-      filename: 'index.html',
-      minify: {
-        // collapseWhitespace: !isDev,
-        collapseWhitespace: false,
-      },
-      inject: 'body',
-    }),
-    new CleanWebpackPlugin(),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, 'src/favicon.ico'),
-          to: path.resolve(__dirname, 'dist'),
-        },
-      ],
-    }),
-    new MiniCssExtractPlugin({
-      filename: 'css/[name].[hash].css',
-      runtime: true,
-    }),
-    new ESLintWebpackPlugin(),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery',
-    }),
-  ],
+  plugins: plugins(),
   module: {
     rules: [
       {

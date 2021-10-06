@@ -1,3 +1,4 @@
+import * as $ from 'jquery';
 import ymaps from 'ymaps';
 import '@com/contacts/style.scss';
 
@@ -7,15 +8,32 @@ const options = {
   lang: 'ru_RU',
 };
 
-ymaps.load(`${options.url}?apikey=${options.apiKey}&lang=${options.lang}`).then(maps => {
-  const map = new maps.Map('map', {
-    center: [53.186938, 50.192028],
-    zoom: 14,
-    controls: [],
-  });
+const showMap = () => {
+  ymaps.load(`${options.url}?apikey=${options.apiKey}&lang=${options.lang}`).then(maps => {
+    const map = new maps.Map('map', {
+      center: [53.186938, 50.192028],
+      zoom: 14,
+      controls: [],
+    });
 
-  map.geoObjects.add(new maps.Placemark([53.186938, 50.192028], {}, {
-    preset: 'islands#dotIcon',
-    iconColor: '#E42313',
-  }));
+    map.geoObjects.add(new maps.Placemark([53.186938, 50.192028], {}, {
+      preset: 'islands#dotIcon',
+      iconColor: '#E42313',
+    }));
+  });
+};
+
+$(() => {
+  const headerWindow = window.innerHeight;
+
+  $(window).on('scroll', (e) => {
+    const top = $('.contacts').offset().top;
+    const item = $(e.target);
+    const diff = top - item.scrollTop() - headerWindow;
+
+    if (diff < 200) {
+      showMap();
+      $(window).off('scroll');
+    }
+  });
 });
