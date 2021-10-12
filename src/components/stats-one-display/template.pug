@@ -38,7 +38,7 @@ section.stats-one-display#stats-one-display
     .stats-one-display__advantages
       h4 Это даст Вам следующие преимущества:
 
-      .row
+      .row.mb-5
         each val, index in itemsStatsOneDisplay
           .col-lg-4.mb-lg-0(
             class=(index + 1 === itemsStatsOneDisplay.length) ? 'mb-0' : 'mb-3'
@@ -48,3 +48,10 @@ section.stats-one-display#stats-one-display
               img: val.img,
               text: val.text,
             })
+
+      .iframe
+        iframe(
+          src="https://app.powerbi.com/view?r=eyJrIjoiNTJiY2RiMDctZGU4ZC00NWJjLWFmNmYtODA2YjQ0NzQzYjhhIiwidCI6ImJmZTBlOTc2LTgyNGEtNGEyMS1hNzU4LTNmYzc2ZTQ0Y2Y2ZSIsImMiOjl9"
+          frameborder="0"
+          allowfullscreen
+        )
