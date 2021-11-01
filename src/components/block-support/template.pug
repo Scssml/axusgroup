@@ -1,0 +1,35 @@
+-
+  const defaultOptionsBlockSupport = {
+    name: '',
+    img: '',
+    price: '',
+    list: [],
+  };
+
+mixin blockSupport(options)
+  - options = Object.assign({}, defaultOptionsBlockSupport, options);
+
+  .block-support
+    .row
+      .col-xl-6
+        .block-support__left
+          .block-support__img 
+            img(src=options.img alt=options.name)
+
+          .h5.block-support__name= options.name
+
+          .block-support__price!= options.price
+
+          +btn({
+            name: 'Бесплатная консультация',
+            size: 'medium',
+            color: 'red',
+            href: '#popup-form',
+          })(class="w-100 fancybox")
+
+      .col-xl-6
+        .block-support__right
+          +list({
+            items: options.list,
+          })
+

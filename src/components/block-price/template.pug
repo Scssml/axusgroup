@@ -22,14 +22,16 @@ mixin blockPrice(options)
           name: 'Подробнее',
           size: 'medium',
           color: 'red',
-        })(class="w-100")
+          href: options.href,
+        })(class="w-100 fancybox")
 
       .col-sm-6.col-md-12.col-lg-6 
         +btn({
           name: 'Узнать цену',
           size: 'medium',
           color: 'red-transparent',
-        })(class="w-100")
+          href: '#popup-form',
+        })(class="w-100 fancybox")
 
     if options.label
     .block-price__label(class=`block-price__label--color-${options.labelColor}`)= options.label

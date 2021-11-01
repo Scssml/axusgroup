@@ -3,6 +3,7 @@
     img: '',
     name: '',
     text: '',
+    href: '',
   };
 
 mixin blockImage(options)
@@ -16,3 +17,9 @@ mixin blockImage(options)
       .block-image__name.h5= options.name 
 
       .size-2= options.text
+
+      if options.href.length > 0
+        +btn({
+          name: 'Подробнее',
+          href: "#popup-text",
+        })(class="block-image__btn fancybox")

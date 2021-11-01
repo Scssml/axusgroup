@@ -4,21 +4,25 @@
       img: require('@img/img-1.jpg'),
       name: 'Кейс 1',
       text: 'Кратко, что было достингнуто Основной текст во всплывашке',
+      href: '#popup-text',
     },
     {
       img: require('@img/img-2.jpg'),
       name: 'Кейс 2',
       text: 'Кратко, что было достингнуто Основной текст во всплывашке',
+      href: '#popup-text',
     },
     {
       img: require('@img/img-3.jpg'),
       name: 'Кейс 3',
       text: 'Кратко, что было достингнуто Основной текст во всплывашке',
+      href: '#popup-text',
     },
     {
       img: require('@img/img-2.jpg'),
       name: 'Кейс 2',
       text: 'Кратко, что было достингнуто Основной текст во всплывашке',
+      href: '#popup-text',
     },
   ];
 
@@ -45,7 +49,8 @@ section.company-growth#company-growth
         +blockImage({
           img: val.img,
           name: val.name,
-          text: val.text
+          text: val.text,
+          href: val.href
         })
 
     .mt-5.d-block.d-xl-none

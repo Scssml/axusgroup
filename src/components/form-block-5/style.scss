@@ -1,0 +1,26 @@
+.form-block-5 {
+  background: #182832;
+  box-shadow: 0px 10px 40px rgba(188, 188, 188, .15);
+  border-radius: 10px;
+  text-align: left;
+  overflow: hidden;
+  color: #fff;
+  padding: 40px;
+
+  @media (max-width: 575px) {
+    padding: 20px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    color: inherit;
+
+    span {
+      color: #E42313;
+    }
+
+    @media (max-width: 575px) {
+      margin-bottom: 10px;
+    }
+  }
+}

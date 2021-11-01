@@ -1,0 +1,19 @@
+.list {
+  font-family: 'Fira Sans Condensed';
+  padding-left: 20px;
+  font-weight: 300;
+  font-size: .95rem;
+
+  li {
+    color: #2C4964;
+    margin-bottom: 25px;
+
+    span {
+      color: #182832;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

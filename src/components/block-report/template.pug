@@ -19,6 +19,13 @@ mixin blockReport(options)
             li
               span= val
 
+        +btn({
+          name: 'Запрос цены',
+          size: 'medium',
+          color: 'red',
+          href: '#popup-form',
+        })(class="fancybox")
+
       .col-lg-7 
         .block-report__title.h5= options.titleImg
 

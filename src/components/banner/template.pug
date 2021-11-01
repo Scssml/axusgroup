@@ -10,16 +10,15 @@ section.banner
           | за 5 дней
 
         .banner__text.size-2
-          | Весь ваш бизнес на одном экране может выглядеть 
-          a(href="#") вот так
-          | . Или 
-          a(href="#") так
+          | Весь ваш бизнес на одном экране может выглядеть 
+          a(href="#iframe") вот так
 
         +btn({
           name: 'Подать заявку',
           size: 'big',
           color: 'red',
-        })(class="banner__btn")
+          href: "#popup-form",
+        })(class="banner__btn fancybox")
 
       .col-xl-6
         .banner__img-wrapper

@@ -136,29 +136,11 @@
         require('@img/img-8.jpg'),
       ],
     },
-    {
-      id: 'report-tab-5',
-      titleList: 'Эти данные всегда под рукой:',
-      list : [
-        'воронкой продаж каждого сотрудника',
-        'ABC анализом',
-        'контролем работы с поставщиками',
-        'контролем сбора дебиторки',
-        'планировать продажи',
-        'пр. данными',
-      ],
-      titleImg: 'Примеры дашборда по продажам:',
-      imgList: [
-        require('@img/img-8.jpg'),
-        require('@img/img-8.jpg'),
-        require('@img/img-8.jpg'),
-      ],
-    },
   ];
 
 section.reports#reports
   .container
-    h2.mb-5 Какие отчеты вы получите с Axus
+    h2.mb-5 Какие отчеты вы получите
 
     .row.mb-5
       .col-xl-3.mb-4.mb-xl-0
@@ -177,6 +159,33 @@ section.reports#reports
                 titleImg: val.titleImg,
                 imgList: val.imgList,
               })
+
+          div(data-tab="report-tab-5" class="d-none")
+            +formBlock3({
+              title: 'Не нашли нужный вариант отчета?',
+              img: require('@img/form-block-3.webp'),
+              text: 'Оставьте свои контактные данные.<br>С Вами свяжутся и расскажут о возможностях системы.',
+            })(class="form-cases__form")
+              form
+                .row.mb-5
+                  .col-12
+                    +input({
+                      name: 'phone',
+                      type: 'tel',
+                      placeholder: 'Телефон',
+                    })
+
+                .row.align-items-center
+                  .col-md-6.col-.mb-4.mb-md-0
+                    +btn({
+                      name: 'Получить кейс',
+                      size: 'big',
+                      color: 'red',
+                    })(class="w-100")
+
+                  .col-md-6 
+                    +checkPrivacyPolicy() 
+
 
     +formBlock4({
       title: 'Оставьте заявку<br><span>на обратный звонок</span>',

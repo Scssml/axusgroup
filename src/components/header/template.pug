@@ -1,6 +1,6 @@
 -
   const logo = require('@img/logo.svg');
-  const slogan = 'Дашборды, которые сэкономят вам время и деньги';
+  const slogan = 'Дашборды, которые сэкономят ваши деньги и время';
   const btnName = 'Заказать звонок'
 
 header.header
@@ -13,7 +13,7 @@ header.header
               a.logo(href="/")
                 img(src=emptyImg data-src=logo, alt="logo").lazyload
 
-            .col.col-xl-auto.d-none.d-md-block
+            .col.d-none.d-md-block
               .header__slogan= slogan
 
         .col
@@ -23,7 +23,8 @@ header.header
                 name: btnName,
                 size: 'small',
                 color: 'white-transparent',
-              })
+                href: '#popup-form',
+              })(class="fancybox")
 
             .col-auto
               button.btn-menu

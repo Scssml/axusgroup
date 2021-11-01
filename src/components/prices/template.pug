@@ -25,6 +25,7 @@
       text: '',
       label: 'Собственнику',
       labelColor: 'yellow',
+      href: '#popup-text',
     },
     {
       img: require('@img/img-5.jpg'),
@@ -32,6 +33,7 @@
       text: '',
       label: 'РОПу',
       labelColor: 'gray',
+      href: '#popup-text',
     },
     {
       img: require('@img/img-6.jpg'),
@@ -39,6 +41,7 @@
       text: '',
       label: 'Маркетинг',
       labelColor: 'blue',
+      href: '#popup-text',
     },
     {
       img: require('@img/img-5.jpg'),
@@ -46,7 +49,45 @@
       text: '',
       label: 'РОПу',
       labelColor: 'gray',
+      href: '#popup-text',
     },
+  ];
+
+  const itemsSupport = [
+    {
+      name: 'Почасовой',
+      img: require('@img/ico-19.svg'),
+      price: '2500 ₽/<span>ч. без НДС</span>',
+      list: [
+        'Параметр 1',
+        'Параметр 2',
+        'Параметр 3',
+        'Параметр 4',
+        'Параметр 5',
+      ],
+    },
+    {
+      name: 'Пакетный',
+      img: require('@img/ico-20.svg'),
+      price: '10000 ₽/<span>5 ч. без НДС</span>',
+      list: [
+        'Параметр 1',
+        'Параметр 2',
+        'Параметр 3',
+        'Параметр 4',
+        'Параметр 5',
+      ],
+    },
+  ];
+
+  const itemsComplexList = [
+    'источники данных',
+    'периодичность и формат данных',
+    'перечень получаемых данных',
+    'объем получаемых данных',
+    'количество требуемых расчетных показателей',
+    'количество требуемых визуализаций',
+    'взаимодействие с визуализациями и подсказки для пользователя',
   ];
 
 section.prices#prices 
@@ -72,10 +113,67 @@ section.prices#prices
 
 
       div(data-tab="price-tab-2").d-none
-        | 2
+        .prices__complex-content
+          .row
+            .col-lg-7
+              +blockContent()
+                h5.mb-4 Для оценки объема работ мы оцениваем требования клиента к конечному результату и информацию о состоянии исходных данных:
+
+                +list({
+                  items: itemsComplexList,
+                })
+
+            .col-lg-5.order-lg-first
+              +formBlock5({
+                title: 'Стоимость проекта зависит от оцениваемого объема работ',
+              })
+
+                form
+                  .mb-5
+                    +input({
+                      name: 'phone',
+                      type: 'tel',
+                      placeholder: 'Телефон',
+                    })
+
+                  .mb-5
+                    +btn({
+                      name: 'Узнать смоимость',
+                      size: 'big',
+                      color: 'red',
+                    })
+
+                  +checkPrivacyPolicy()
 
       div(data-tab="price-tab-3").d-none
-        | 3
+        +blockContent()
+          h4.mb-3 Argumenta ponderantur, non numerantur
+
+          p.mb-5 
+            | Abusus non tollit usum. Accepto damno. Accessio cedit principali. Actio bonae fidei. Actio in factum concepta. Actio in ius concepta.  Actio in personam. Actio in rem. Actio noxalis. Actio poenalis. Alibi. A potiori. Argumenta ponderantur, non numerantur. Argumentum ad oculos.
+            | Casum sentit dominus. Caveat emptor. Ceteris paribus. Condicio sine qua non. Contra factum non datur argumentum. Conventio facit legam. 
+
+          form
+            .row.align-items-center
+              .col-md-7.col-lg-4
+                +input({
+                  name: 'phone',
+                  type: 'tel',
+                  placeholder: 'Телефон',
+                })
+
+              .col-md-5.col-lg-4.col-xl-3.mt-4.mt-md-0
+                +btn({
+                  name: 'Узнать смоимость',
+                  size: 'big',
+                  color: 'red',
+                })(class="w-100")
+
+              .col-lg-4.col-xl-3.mt-4.mt-lg-0
+                +checkPrivacyPolicy() 
 
       div(data-tab="price-tab-4").d-none
-        | 4
+        .row 
+          each val in itemsSupport
+            .col-md-6.mb-4
+              +blockSupport(val)

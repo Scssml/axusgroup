@@ -2,24 +2,27 @@
   const itemsReviews = [
     {
       img: require('@img/company-1.jpg'),
-      name: 'ООО «Компания»',
-      subtitle: 'С каким запросом пришли',
-      text: 'Abusus non tollit usum. Accepto damno. Accessio cedit principali. Actio bonae fidei. Actio in factum concepta. Actio in ius concepta.  Actio in personam. Actio in rem. Actio noxalis. Actio poenalis. Alibi. A potiori. Argumenta ponderantur, non numerantur. Argumentum ad oculos.',
+      name: 'Базис',
+      subtitle: 'Пришли с запросом решить проблему с анализом эффективности рекламных кампаний',
+      text: `
+        У нас была проблема с детальным анализом эффективности рекламных компаний. Мы вкладываем большой рекламный бюджет и используем много каналов для продвижения. Много раз пытались выстроить аналитику: нам помогали маркетинговые агентства, также мы использовали платформу Roistat. Но общего понимания, которое бы не вызывало споров между отделом маркетинга и отделом продаж так и не появилось. Маркетологи по два дня тратили на сведение отчетов и выверку показателей, не могли оперативно перераспределить бюджет на более эффективные кампании. Ответа на вопрос, насколько эффективно расходуется рекламный бюджет у руководителя не было. 
+        Когда мы пришли в Аксус, нам предложили внедрить дашборд - инструмент визуализации и анализа данных. Ребята работали глубоко и вдумчиво, давая нам советы - как лучше и оптимальнее поступить в каждом случае. Сейчас проект находится на стадии завершения и запуска. Стало четко видно, что мы можем перераспределять рекламный бюджет в более эффективные каналы, мы можем освободиться от тех, которые не несут отдачу. Мы смогли снизить рекламный бюджет без потери эффективности.  
+        Спасибо команде Аксус за профессионализм и качественную работу! Теперь мы знаем намного больше о том, как работает наш бизнес.
+      `,
       rating: '5.0',
+      href: '#popup-text',
     },
     {
       img: require('@img/company-2.jpg'),
-      name: 'ООО «Компания»',
-      subtitle: 'С каким запросом пришли',
-      text: 'Abusus non tollit usum. Accepto damno. Accessio cedit principali. Actio bonae fidei. Actio in factum concepta. Actio in ius concepta.  Actio in personam. Actio in rem. Actio noxalis. Actio poenalis. Alibi. A potiori. Argumenta ponderantur, non numerantur. Argumentum ad oculos.',
+      name: 'SEO Простор',
+      subtitle: 'Пришли с запросом технической поддержки',
+      text: `
+        Давно пользуемся Power BI. Нам необходима была кастомизация сервиса под наши потребности. Штатный специалист - это дорого. И найти хорошего спеца сложно. Очень рады, что начали партнерство с компанией Аксус.
+        Все задачи выполняют в оговоренный срок. Постоянно поступают предложения по оптимизации. 
+        Спасибо!
+      `,
       rating: '4.9',
-    },
-    {
-      img: require('@img/company-1.jpg'),
-      name: 'ООО «Компания»',
-      subtitle: 'С каким запросом пришли',
-      text: 'Abusus non tollit usum. Accepto damno. Accessio cedit principali. Actio bonae fidei. Actio in factum concepta. Actio in ius concepta.  Actio in personam. Actio in rem. Actio noxalis. Actio poenalis. Alibi. A potiori. Argumenta ponderantur, non numerantur. Argumentum ad oculos.',
-      rating: '5.0',
+      href: '#popup-text',
     },
   ];
 
@@ -44,6 +47,7 @@ section.reviews#reviews
           text: val.text,
           subtitle: val.subtitle,
           rating: val.rating,
+          href: val.href,
         })
 
     .row.justify-content-between.justify-content-xl-center.mt-5.align-items-center
@@ -52,7 +56,8 @@ section.reviews#reviews
           name: 'Оставить отзыв',
           size: 'medium',
           color: 'red',
-        })
+          href: '#popup-form',
+        })(class="fancybox")
 
       .col-auto.d-block.d-xl-none
         +sliderNav({

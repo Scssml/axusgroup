@@ -1,0 +1,22 @@
++popup({
+  title: 'Заголовок',
+  id: 'popup-form',
+  size: 'small',
+  titleAlign: 'center',
+})
+  form.mt-3
+    .mb-4
+      +input({
+        name: 'phone',
+        type: 'tel',
+        placeholder: 'Телефон',
+      })
+
+    .mb-4.text-center
+      +btn({
+        name: 'Отправить',
+        size: 'big',
+        color: 'red',
+      })
+
+    +checkPrivacyPolicy() 

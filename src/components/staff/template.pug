@@ -26,12 +26,12 @@ section.staff#staff
       .col-xl-10 
         h2 Кто будет работать с вами
       
-      .col-xl-2.d-none.d-block 
+      .col-xl-2.d-none.d-xl-block 
         +sliderNav({
           sliderId: 'slider-staff',
         })(class="ml-auto")
     
-    +slider2({
+    +slider3({
       sliderId: 'slider-staff',
     })(class="mb-5")
       each val in itemsStaffSlider

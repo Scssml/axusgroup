@@ -5,6 +5,7 @@
     subtitle: '',
     text: '',
     rating: 0,
+    href: '',
   };
 
 mixin blockReview(options)
@@ -19,5 +20,7 @@ mixin blockReview(options)
     .block-review__subtitle= options.subtitle
 
     .block-review__text.size-2= options.text
+
+    a.block-review__popup.fancybox(href= options.href) Отзыв полностью
 
     .block-review__rating= options.rating

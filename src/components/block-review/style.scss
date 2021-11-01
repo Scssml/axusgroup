@@ -44,7 +44,22 @@
   }
 
   &__text {
+    height: 140px;
+    overflow: hidden;
+  }
 
+  &__popup {
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration-line: underline;
+    color: #182832;
+    font-weight: 400;
+    margin-top: 14px;
+    display: inline-block;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   &__rating {

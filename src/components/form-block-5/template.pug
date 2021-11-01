@@ -1,0 +1,13 @@
+-
+  const defaultOptionsFormBlock5 = {
+    title: '',
+  };
+
+mixin formBlock5(options)
+  - options = Object.assign({}, defaultOptionsFormBlock5, options);
+
+  .form-block-5&attributes(attributes)
+    if options.title
+      .form-block-5__title.h4!= options.title
+
+      block

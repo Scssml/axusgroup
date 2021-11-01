@@ -1,0 +1,11 @@
+-
+  const defaultOptionsBlockContent = {
+    title: '',
+    img: '',
+  };
+
+mixin blockContent(options)
+  - options = Object.assign({}, defaultOptionsBlockContent, options);
+
+  .block-content&attributes(attributes)
+    block

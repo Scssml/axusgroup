@@ -1,0 +1,25 @@
+-
+  const defaultOptionsFormBlock3 = {
+    title: '',
+    img: '',
+    text: '',
+  };
+
+mixin formBlock3(options)
+  - options = Object.assign({}, defaultOptionsFormBlock3, options);
+
+  .form-block-3 
+    .row 
+      .col-lg-7 
+        .form-block-3__content
+          if options.title
+            .form-block-3__title.h4= options.title
+
+          .mb-5!= options.text
+
+          block
+
+      .col-lg-5 
+        .form-block-3__img 
+          if options.img
+            img(src=emptyImg data-src=options.img, alt=options.title).lazyload
