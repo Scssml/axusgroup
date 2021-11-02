@@ -8,6 +8,7 @@ import '@style/typography.scss';
 import '@style/grid.scss';
 
 import '@js/lazyload.js';
+import '@js/flexHeightFix.js';
 
 import '@com/header/script.js';
 import '@com/btn/script.js';

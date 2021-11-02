@@ -116,34 +116,36 @@ section.prices#prices
         .prices__complex-content
           .row
             .col-lg-7
-              +blockContent()
-                h5.mb-4 Для оценки объема работ мы оцениваем требования клиента к конечному результату и информацию о состоянии исходных данных:
+              .flex-height-fix
+                +blockContent()
+                  h5.mb-4 Для оценки объема работ мы оцениваем требования клиента к конечному результату и информацию о состоянии исходных данных:
 
-                +list({
-                  items: itemsComplexList,
-                })
+                  +list({
+                    items: itemsComplexList,
+                  })
 
             .col-lg-5.order-lg-first
-              +formBlock5({
-                title: 'Стоимость проекта зависит от оцениваемого объема работ',
-              })
+              .flex-height-fix
+                +formBlock5({
+                  title: 'Стоимость проекта зависит от оцениваемого объема работ',
+                })
 
-                form
-                  .mb-5
-                    +input({
-                      name: 'phone',
-                      type: 'tel',
-                      placeholder: 'Телефон',
-                    })
+                  form
+                    .mb-5
+                      +input({
+                        name: 'phone',
+                        type: 'tel',
+                        placeholder: 'Телефон',
+                      })
 
-                  .mb-5
-                    +btn({
-                      name: 'Узнать смоимость',
-                      size: 'big',
-                      color: 'red',
-                    })
+                    .mb-5
+                      +btn({
+                        name: 'Узнать смоимость',
+                        size: 'big',
+                        color: 'red',
+                      })
 
-                  +checkPrivacyPolicy()
+                    +checkPrivacyPolicy()
 
       div(data-tab="price-tab-3").d-none
         +blockContent()

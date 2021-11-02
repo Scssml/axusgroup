@@ -17,6 +17,10 @@ h1,
   font-size: 3.5rem;
   line-height: 1.2;
 
+  @media (max-width: 991px) {
+    font-size: 2.5rem;
+  }
+
   @media (max-width: 575px) {
     font-size: 1.66rem;
     line-height: 1.3;
@@ -30,8 +34,12 @@ h2,
   line-height: 1.2;
   color: #2C4964;
 
+  @media (max-width: 991px) {
+    font-size: 2rem;
+  }
+
   @media (max-width: 575px) {
-    font-size: 1.53rem;
+    font-size: 1.5rem;
     line-height: 1.3;
   }
 }

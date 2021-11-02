@@ -11,4 +11,8 @@ $('.tabs__item').on('click', (e) => {
 
   $('#' + tabsId + ' [data-tab].d-block').removeClass('d-block').addClass('d-none');
   $('#' + tabsId + ' [data-tab="' + tab + '"]').addClass('d-block').removeClass('d-none');
+
+  $('#' + tabsId + ' [data-tab="' + tab + '"]').find('div[class^="col"] .flex-height-fix').css('height', '100%');
+
+  window.flexHeightFix();
 });

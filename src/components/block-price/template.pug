@@ -10,7 +10,7 @@
 mixin blockPrice(options)
   - options = Object.assign({}, defaultOptionsBlockPrice, options);
 
-  .block-price
+  .block-price.flex-height-fix
     .block-price__img 
       img(src=emptyImg data-src=options.img alt=options.name).lazyload
 

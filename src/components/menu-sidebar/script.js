@@ -3,7 +3,7 @@ import '@com/menu-sidebar/style.scss';
 
 $('.menu-sidebar__link').on('click', (e) => {
   const id = $(e.target).attr('href');
-  const headerHeight = $('.header').outerHeight();
+  const headerHeight = 57;
   const top = $(id)[0].getBoundingClientRect().top;
 
   $('.sidebar__btn-close').trigger('click');

@@ -18,7 +18,7 @@ mixin formBlock4(options)
           block
 
       .col-lg-6 
-        .form-block-4__img 
+        .form-block-4__img.flex-height-fix
           if options.img
             img(src=emptyImg data-src=options.img, alt=options.title).lazyload
 

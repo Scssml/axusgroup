@@ -10,13 +10,13 @@ mixin formBlock1(options)
   .form-block-1 
     .row 
       .col-lg-7 
-        .form-block-1__content
+        .form-block-1__content.flex-height-fix
           if options.title
             .form-block-1__title.h4= options.title
 
           block
 
       .col-lg-5 
-        .form-block-1__img 
+        .form-block-1__img.flex-height-fix 
           if options.img
             img(src=emptyImg data-src=options.img, alt=options.title).lazyload

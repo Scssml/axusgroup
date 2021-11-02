@@ -1,21 +1,5 @@
 .header {
-  height: 88px;
-
-  &__content {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: #182832;
-    padding: 15px 0;
-    border: 1px solid #27323B;
-    color: #84898E;
-    z-index: 5;
-
-    @media (max-width: 575px) {
-      padding: 10px 0;
-    }
-  }
+  height: 87px;
 
   .logo {
 
@@ -27,12 +11,53 @@
     }
   }
 
+  &__content {
+    width: 100%;
+    background: #182832;
+    padding: 15px 0;
+    border-bottom: 1px solid #27323B;
+    color: #84898E;
+    z-index: 5;
+
+    &--fixed {
+      position: fixed;
+      top: -57px;
+      left: 0;
+      transform: translateY(100%);
+      transition: transform .25s ease-in-out;
+      padding: 8px 0;
+
+      .logo {
+
+        img {
+          max-height: 36px;
+        }
+      }
+
+      .btn {
+        height: 40px;
+      }
+
+      .header__slogan {
+        display: none;
+      }
+
+      @media (max-width: 575px) {
+        top: -57px;
+      }
+    }
+
+    @media (max-width: 575px) {
+      padding: 10px 0;
+    }
+  }
+
   &__slogan {
     font-size: .85rem;
     line-height: 1.18;
   }
 
   @media (max-width: 575px) {
-    height: 58px;
+    height: 57px;
   }
 }

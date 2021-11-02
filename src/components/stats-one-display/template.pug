@@ -49,13 +49,14 @@ section.stats-one-display#stats-one-display
               text: val.text,
             })
 
-      h4.mb-3 Посмотрите пример отчета, который вы можете получить
+      #iframe
+        h4.mb-3 Посмотрите пример отчета, который вы можете получить
 
-      p.mb-4 Перед Вами пример отчета, собранный для демонстрации возможностей. Попробуйте повзаимодействовать с ним: изменить дату, переключиться между отчетами и пр.
+        p.mb-4 Перед Вами пример отчета, собранный для демонстрации возможностей. Попробуйте повзаимодействовать с ним: изменить дату, переключиться между отчетами и пр.
 
-      #iframe.iframe
-        iframe(
-          src="https://app.powerbi.com/view?r=eyJrIjoiNTJiY2RiMDctZGU4ZC00NWJjLWFmNmYtODA2YjQ0NzQzYjhhIiwidCI6ImJmZTBlOTc2LTgyNGEtNGEyMS1hNzU4LTNmYzc2ZTQ0Y2Y2ZSIsImMiOjl9"
-          frameborder="0"
-          allowfullscreen
-        )
+        .iframe
+          iframe(
+            src="https://app.powerbi.com/view?r=eyJrIjoiNTJiY2RiMDctZGU4ZC00NWJjLWFmNmYtODA2YjQ0NzQzYjhhIiwidCI6ImJmZTBlOTc2LTgyNGEtNGEyMS1hNzU4LTNmYzc2ZTQ0Y2Y2ZSIsImMiOjl9"
+            frameborder="0"
+            allowfullscreen
+          )

@@ -8,7 +8,7 @@
 mixin blockIcon(options)
   - options = Object.assign({}, defaultOptionsBlockIcon, options);
 
-  .block-icon
+  .block-icon.flex-height-fix
     if options.img
       .block-icon__img 
         img(src=emptyImg data-src=options.img, alt=options.name).lazyload

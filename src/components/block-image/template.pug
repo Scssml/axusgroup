@@ -9,7 +9,7 @@
 mixin blockImage(options)
   - options = Object.assign({}, defaultOptionsBlockImage, options);
 
-  .block-image
+  .block-image.flex-height-fix
     .block-image__img 
       img(src=emptyImg data-src=options.img, alt=options.name).lazyload
 
