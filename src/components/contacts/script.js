@@ -25,15 +25,16 @@ const showMap = () => {
 
 $(() => {
   const headerWindow = window.innerHeight;
-
-  $(window).on('scroll', (e) => {
+  const scrolShowMap = (e) => {
     const top = $('.contacts').offset().top;
     const item = $(e.target);
     const diff = top - item.scrollTop() - headerWindow;
 
     if (diff < 200) {
       showMap();
-      $(window).off('scroll');
+      $(window).off('scroll', scrolShowMap);
     }
-  });
+  };
+
+  $(window).on('scroll', scrolShowMap);
 });
